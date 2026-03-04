@@ -34,10 +34,11 @@ const ProductList = () => {
           <div className="product-grid">
             {plants.map((plant) => {
               const alreadyAdded = Boolean(cartItems[plant.id]);
+              const imageSrc = `${import.meta.env.BASE_URL}${plant.image.replace(/^\//, '')}`;
 
               return (
                 <article key={plant.id} className="product-card">
-                  <img src={plant.image} alt={plant.name} className="product-image" />
+                  <img src={imageSrc} alt={plant.name} className="product-image" />
                   <div className="product-copy">
                     <h4>{plant.name}</h4>
                     <p>{plant.description}</p>

@@ -26,7 +26,12 @@ function App() {
     if (route === 'cart') return <CartItem />;
 
     return (
-      <main className="landing-page">
+      <main
+        className="landing-page"
+        style={{
+          '--landing-image': `url(${import.meta.env.BASE_URL}images/plants/tropical/tf1.jpg)`,
+        }}
+      >
         <div className="landing-overlay" />
         <div className="landing-content">
           <p className="eyebrow">Paradise Nursery Shopping Application</p>
